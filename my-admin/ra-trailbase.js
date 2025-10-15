@@ -1,5 +1,5 @@
 // Rev. 0.0.2. Copyright (C) Stellenbosch University. All Rights Reserved. Distribution forbidden.
-import{initClientFromCookies as e}from "trailbase";
+import{initClientFromCookies as e}from "trailbase"; //FIND OUT HOW FLO DID IT
 const r=async r=>{let t=()=>localStorage.setItem("auth",JSON.stringify(n.tokens()??null));
     const o=localStorage.getItem("auth")?JSON.parse(localStorage.getItem("auth")??"null"):void 0,n=await e(r,{tokens:o,onAuthChange:t});
     return t(),{dataProvider:{getList:async(e,r)=>{const{pagination:t,sort:o,filter:a}=r,i={limit:t?.perPage??50,offset:t?(t.page-1)*t.perPage:0},s=[];if(o?.field&&o?.order){const e="DESC"===o.order?"-":"";
