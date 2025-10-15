@@ -15,3 +15,13 @@ const App = () => (
 );
 
 export default App;
+
+/*
+// src/index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App'; // Import the App component
+
+ReactDOM.render(<App />, document.getElementById('root'));
+
+ */

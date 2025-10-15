@@ -1,5 +1,5 @@
 // Rev. 0.0.2. Copyright (C) Stellenbosch University. All Rights Reserved. Distribution forbidden.
-import{initClientFromCookies as e} from "https://special-halibut-7qv47r9rppqc7qp-4000.app.github.dev/_/admin/";  // "trailbase" FIND OUT HOW FLO DID IT
+import{initClientFromCookies as e} from "https://special-halibut-7qv47r9rppqc7qp-4000.app.github.dev/";  // "trailbase" FIND OUT HOW FLO DID IT
 
 const r=async r=>{
     let t=()=>localStorage.setItem("auth",JSON.stringify(n.tokens()??null));
