@@ -1,9 +1,14 @@
 // Rev. 0.0.2. Copyright (C) Stellenbosch University. All Rights Reserved. Distribution forbidden.
-import{initClientFromCookies as e}from "trailbase"; //FIND OUT HOW FLO DID IT
-const r=async r=>{let t=()=>localStorage.setItem("auth",JSON.stringify(n.tokens()??null));
-    const o=localStorage.getItem("auth")?JSON.parse(localStorage.getItem("auth")??"null"):void 0,n=await e(r,{tokens:o,onAuthChange:t});
-    return t(),{dataProvider:{getList:async(e,r)=>{const{pagination:t,sort:o,filter:a}=r,i={limit:t?.perPage??50,offset:t?(t.page-1)*t.perPage:0},s=[];if(o?.field&&o?.order){const e="DESC"===o.order?"-":"";
-        s.push(`${e}${o.field}`)}const c=[];
+import{initClientFromCookies as e} from "https://special-halibut-7qv47r9rppqc7qp-4000.app.github.dev/_/admin/";  // "trailbase" FIND OUT HOW FLO DID IT
+
+const r=async r=>{
+    let t=()=>localStorage.setItem("auth",JSON.stringify(n.tokens()??null));
+    const o=localStorage.getItem("auth")? JSON.parse(localStorage.getItem("auth")??"null"):void 0,n=await e(r,{tokens:o,onAuthChange:t});
+    return t(),{dataProvider:{getList:async(e,r)=>{const{pagination:t,sort:o,filter:a}=r,i={limit:t?.perPage??50,offset:t?(t.page-1)*t.perPage:0},s=[];
+    if(o?.field&&o?.order){
+        const e="DESC"===o.order?"-":"";
+        s.push(`${e}${o.field}`)}
+        const c=[];
         a&&Object.entries(a).forEach(([e,r])=>{null!=r&&""!==r&&("string"==typeof r||"number"==typeof r||"boolean"==typeof r?c.push({column:e,op:"equal",value:r.toString()}):"object"==typeof r&&null!==r&&Object.entries(r).forEach(([r,t])=>{let o="equal";
             switch(r){case"$eq":default:o="equal";
                 break;
